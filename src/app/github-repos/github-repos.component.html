@@ -1,0 +1,18 @@
+<div class="card mt-5">
+    <div class="card-header">
+        <h4>Repositories</h4>
+
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li *ngFor="let repo of gitRepo" class="list-group-item d-flex justify-content-between">
+                <a href="/" class="text-primary" target="_blank">{{repo.name}}</a>
+                <span class="badge bg-success">Stars</span>
+                <span class="badge bg-warning">Stars</span>
+
+
+            </li>
+        </ul>
+
+    </div>
+</div>
