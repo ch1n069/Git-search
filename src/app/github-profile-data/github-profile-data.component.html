@@ -1,0 +1,32 @@
+<div class="card">
+    <div class="card-header">
+        <span class="badge bg-success mr-5">{{gitProfile.followers}}Followers</span>
+        <span class="badge bg-danger mr-5">{{gitProfile.public_repos}} Repositories</span>
+        <span class="badge bg-danger mr-5">{{gitProfile.public_gists}} Gists</span>
+        <span class="badge bg-primary mr-5">{{gitProfile.following}} Following</span>
+
+
+
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">User Name : <span class="font-weight-bold">{{gitProfile.name}}</span> </li>
+
+            <li class="list-group-item">Location :{{gitProfile.location}}</li>
+
+            <li class="list-group-item">Email :{{gitProfile.email}}</li>
+
+            <li class="list-group-item">Company : {{gitProfile.company}}</li>
+
+            <li class="list-group-item">Blog : {{gitProfile.blog}}</li>
+
+            <li class="list-group-item">Member since : {{gitProfile.created_at | date}}</li>
+            <li class="list-group-item">profile URL : {{gitProfile.htm_url}}</li>
+
+
+
+
+
+        </ul>
+    </div>
+</div>

@@ -1,1 +1,11 @@
-<p>github-profile works!</p>
+<div *ngIf="gitProfile" class="mt-3">
+    <div class="row ">
+        <div class="col-md-3 ">
+            <app-github-profile-card [gitProfile]="gitProfile "></app-github-profile-card>
+        </div>
+        <div class="col-md-9 ">
+            <app-github-profile-data [gitProfile]="gitProfile "></app-github-profile-data>
+
+        </div>
+    </div>
+</div>

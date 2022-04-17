@@ -1,9 +1,14 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ServerService } from '../server.service';
 
 @Component({
   selector: 'app-github',
   templateUrl: './github.component.html',
-  styleUrls: ['./github.component.css']
+  styleUrls: ['./github.component.css'],
+  providers: [ServerService,HttpClient]
+
+
 })
 export class GithubComponent implements OnInit {
 
@@ -11,7 +16,6 @@ export class GithubComponent implements OnInit {
   public gitProfile:any;
   public gitRepo:any[];
   public errorMessage:string
-  private _serverService: any;
 
 
   public searchUser(){
@@ -22,8 +26,9 @@ export class GithubComponent implements OnInit {
     })
   }
   
-  constructor() { }
+  constructor(private _serverService: ServerService) { 
 
+  }
   ngOnInit(): void {
   }
 
