@@ -7,13 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GithubComponent implements OnInit {
 
-  public userQuerry:string;
+  public userQuery:string;
   public gitProfile:any;
   public gitRepo:any[];
+  public errorMessage:string
+  private _serverService: any;
 
 
   public searchUser(){
-    
+    this._serverService.getProfile(this.userQuery).subscribe( (data)=>{
+      this.gitProfile = data;
+    },(error)=>{
+      this.errorMessage = error;
+    })
   }
   
   constructor() { }
