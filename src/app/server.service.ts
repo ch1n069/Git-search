@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, Observable, retry } from 'rxjs';
+import { catchError, Observable, retry, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -20,4 +20,28 @@ export class ServerService {
     );
 
   }
+
+  // for repos 
+  public getRepo(userQuery):Observable<any>{
+    var dataUrl = `https://api.github.com/users/${userQuery}/repos?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET};`
+    return this.httpClient.get<any>(dataUrl).pipe(
+      retry(1),
+      catchError(this.Errors)
+    );
+
+  }
+  public Errors(error:HttpErrorResponse){
+    let errorMessage:string;
+    if(error.error instanceof ErrorEvent){
+      //
+      errorMessage = `MESSAGE:${error.error.message}`
+    }
+    else{
+      errorMessage = `STATUS:$(error.status) MESSAGE : ${error.message}`;
+    }
+
+    return throwError(errorMessage);
+  }
+
+
 }
