@@ -9,7 +9,10 @@
                 <div class="card-body">
                     <form action="">
                         <div class="form-group">
-                            <input type="search" class="form-control" placeholder="Enter github username" name="" id="">
+                            <input [(ngModel)]="search" name="user" type="search" class="form-control" placeholder="Enter github username" name="" id="">
+                        </div>
+                        <div>
+                            <input type="submit" value="search" class="btn btn-secondary btn-sm">
                         </div>
 
                     </form>
