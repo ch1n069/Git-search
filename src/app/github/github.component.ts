@@ -16,7 +16,7 @@ export class GithubComponent implements OnInit {
   public userQuery:string;
   public gitProfile:any;
   public gitRepo:any[];
-  public errorMessage:string
+  public errorMessage:string;
 
 
   public searchUser(){
@@ -40,6 +40,8 @@ export class GithubComponent implements OnInit {
   constructor(private _serverService: ServerService, private ngxSpinner: NgxSpinnerService) { 
 
   }
+
+
   ngOnInit(): void {
   }
 

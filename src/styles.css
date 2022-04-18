@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&family=Oswald:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;1,100&family=Rye&family=Tulpen+One&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #7DC2AF;
+    background-image: url("https://www.pexels.com/photo/focused-young-ethnic-woman-with-credit-card-and-laptop-6348124/");
+}

@@ -1,0 +1,12 @@
+.card {
+    border-radius: 25px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    background-color: #41b3a3;
+}
+
+.list-group-item {
+    background-color: #41b3a3;
+    color: white;
+    font-size: 19px;
+}

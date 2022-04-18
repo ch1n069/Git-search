@@ -8,8 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class GithubReposComponent implements OnInit {
  
   @Input() gitRepo:any[];
+  public showRepo = false;
+
 
   constructor() { }
+
+
+  toggleRepo(){
+    this.showRepo = !this.showRepo;
+  }
 
   ngOnInit(): void {
   }
