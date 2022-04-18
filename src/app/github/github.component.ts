@@ -23,6 +23,11 @@ export class GithubComponent implements OnInit {
       this.gitProfile = data;
     },(error)=>{
       this.errorMessage = error;
+    });
+    this._serverService.getRepo(this.userQuery).subscribe((data)=>{
+      this.gitRepo = data ;
+    },(error)=>{
+      this.errorMessage = error;
     })
   }
   
