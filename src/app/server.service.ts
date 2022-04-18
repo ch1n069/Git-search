@@ -24,9 +24,9 @@ export class ServerService {
   }
 
   // for repos 
-  public getRepo(userQuery):Observable<any>{
+  public getRepo(userQuery):Observable<any[]>{
     var dataUrl = `https://api.github.com/users/${userQuery}/repos?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET};`
-    return this.httpClient.get<any>(dataUrl).pipe(
+    return this.httpClient.get<any[]>(dataUrl).pipe(
       retry(1),
       catchError(this.Errors)
     );
