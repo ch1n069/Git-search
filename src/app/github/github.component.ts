@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { ServerService } from '../server.service';
 
 @Component({
@@ -19,6 +20,8 @@ export class GithubComponent implements OnInit {
 
 
   public searchUser(){
+    // spinner display 
+    this.ngxSpinner.show();
     this._serverService.getProfile(this.userQuery).subscribe( (data)=>{
       this.gitProfile = data;
     },(error)=>{
@@ -26,12 +29,15 @@ export class GithubComponent implements OnInit {
     });
     this._serverService.getRepo(this.userQuery).subscribe((data)=>{
       this.gitRepo = data ;
+      // spinner stop
+
+      this.ngxSpinner.hide();
     },(error)=>{
       this.errorMessage = error;
     })
   }
   
-  constructor(private _serverService: ServerService) { 
+  constructor(private _serverService: ServerService, private ngxSpinner: NgxSpinnerService) { 
 
   }
   ngOnInit(): void {
