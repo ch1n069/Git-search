@@ -2,7 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
 
-##Live link [livelink](https://ch1n069.github.io/Git-search/git-search/)
+## Live link 
+[livelink](https://ch1n069.github.io/Git-search/git-search/)
+
+
+## screen shots 
+![Screenshot from 2022-04-18 16-56-13](https://user-images.githubusercontent.com/82473156/163818764-56abef9b-b824-402e-8163-5d9682b3d496.png)
 
 ## Development server
 
