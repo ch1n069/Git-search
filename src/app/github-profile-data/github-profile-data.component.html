@@ -21,7 +21,7 @@
             <li class="list-group-item">Blog : {{gitProfile.blog}}</li>
 
             <li class="list-group-item">Member since : {{gitProfile.created_at | date}}</li>
-            <li class="list-group-item">profile URL : {{gitProfile.htm_url}}</li>
+            <li class="list-group-item">profile URL : <a [href]="gitProfile.html_url" target="_blank">{{gitProfile.html_url}}</a></li>
 
 
 
